@@ -12,7 +12,6 @@ import org.nutz.mvc.Mvcs;
 import org.nutz.resource.Scans;
 
 import com.jarvis.cache.AbstractCacheManager;
-import com.jarvis.cache.admin.servlet.CacheManagerConfig;
 
 public class NutzCacheManagerConfig implements CacheManagerConfig {
 

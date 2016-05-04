@@ -4,6 +4,7 @@ import java.lang.reflect.Method;
 
 import org.nutz.aop.InterceptorChain;
 import org.nutz.aop.MethodInterceptor;
+import org.nutz.lang.Mirror;
 import org.nutz.log.Log;
 import org.nutz.log.Logs;
 
@@ -21,6 +22,8 @@ public class AutoLoadCacheAopInterceptor implements MethodInterceptor {
 
     private boolean haveCache;
 
+    private Mirror<InterceptorChain> mirror;
+
     public AutoLoadCacheAopInterceptor(AbstractCacheManager cacheManager, Cache cache, Method method) {
         this.cachePointCut=cacheManager;
         this.cache=cache;
@@ -30,6 +33,7 @@ public class AutoLoadCacheAopInterceptor implements MethodInterceptor {
             }
             this.haveCache=true;
         }
+        mirror=Mirror.me(InterceptorChain.class);
     }
 
     public void filter(final InterceptorChain chain) throws Throwable {
@@ -54,6 +58,7 @@ public class AutoLoadCacheAopInterceptor implements MethodInterceptor {
 
                     @Override
                     public Object doProxyChain(Object[] arguments) throws Throwable {
+                        mirror.setValue(chain, "args", arguments);
                         chain.doChain();
                         return chain.getReturn();
                     }
