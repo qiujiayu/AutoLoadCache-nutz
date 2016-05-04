@@ -1,6 +1,8 @@
 # AutoLoadCache-nutz
 ======================
-
+[![Build Status](http://img.shields.io/travis/qiujiayu/AutoLoadCache-nutz.svg?style=flat&branch=master)](https://travis-ci.org/qiujiayu/AutoLoadCache-nutz)
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.qiujiayu/autoload-cache-nutz.svg?style=flat-square)](https://maven-badges.herokuapp.com/maven-central/com.github.qiujiayu/autoload-cache-nutz/)
+![GitHub license](https://img.shields.io/github/license/qiujiayu/AutoLoadCache-nutz.svg?style=flat-square)
 使用方法
 -------------------------
 
