@@ -47,6 +47,7 @@ var ioc = {
 			namespace : 'test_hessian'
 		},
 		events : {
+		    create : "start",
 			depose : "destroy"
 		}
 	}
