@@ -28,7 +28,7 @@
   </scm>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <autoload-cache-version>4.6</autoload-cache-version>
+    <autoload-cache-version>4.7</autoload-cache-version>
     <nutz-version>1.r.56-SNAPSHOT</nutz-version>
   </properties>
   <build>
