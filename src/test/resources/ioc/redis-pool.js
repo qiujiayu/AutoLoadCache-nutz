@@ -42,9 +42,11 @@ var ioc = {
 		type : "com.jarvis.cache.map.CachePointCut",
 		args : [ {
 			refer : "autoLoadConfig",
-			refer : "fastjsonSerializer",
-			refer : "scriptParser"
-		} ],
+		},{
+		  refer : "fastjsonSerializer"
+		} ,{
+          refer : "scriptParser"
+        }],
 		fields : {
 			namespace : 'test_hessian'
 		},
