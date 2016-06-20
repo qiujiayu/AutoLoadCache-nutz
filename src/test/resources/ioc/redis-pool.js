@@ -32,18 +32,20 @@ var ioc = {
 			autoLoadPeriod : 50
 		}
 	},
-	hessianSerializer : {
-		type : "com.jarvis.cache.serializer.HessianSerializer"
+	fastjsonSerializer : {
+		type : "com.jarvis.cache.serializer.FastjsonSerializer"
 	},
+	scriptParser : {
+        type : "com.jarvis.cache.script.SpringELParser"
+    },
 	cachePointCut : {
 		type : "com.jarvis.cache.map.CachePointCut",
 		args : [ {
-			refer : "autoLoadConfig"
+			refer : "autoLoadConfig",
+			refer : "fastjsonSerializer",
+			refer : "scriptParser"
 		} ],
 		fields : {
-			serializer : {
-				refer : "hessianSerializer"
-			},
 			namespace : 'test_hessian'
 		},
 		events : {
