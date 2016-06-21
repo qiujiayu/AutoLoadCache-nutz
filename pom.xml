@@ -29,7 +29,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <autoload-cache-version>4.11</autoload-cache-version>
-    <nutz-version>1.r.56-SNAPSHOT</nutz-version>
+    <nutz-version>1.r.56.r3</nutz-version>
   </properties>
   <build>
     <plugins>
