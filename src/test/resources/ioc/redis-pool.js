@@ -36,7 +36,7 @@ var ioc = {
 		type : "com.jarvis.cache.serializer.FastjsonSerializer"
 	},
 	scriptParser : {
-        type : "com.jarvis.cache.script.SpringELParser"
+        type : "com.jarvis.cache.script.JavaScriptParser"
     },
 	cachePointCut : {
 		type : "com.jarvis.cache.map.CachePointCut",
