@@ -36,7 +36,7 @@ var ioc = {
 		type : "com.jarvis.cache.serializer.FastjsonSerializer"
 	},
 	scriptParser : {
-        type : "com.jarvis.cache.script.JavaScriptParser"
+        type : "com.jarvis.cache.script.OgnlParser"
     },
 	cachePointCut : {
 		type : "com.jarvis.cache.map.CachePointCut",
@@ -48,7 +48,8 @@ var ioc = {
           refer : "scriptParser"
         }],
 		fields : {
-			namespace : 'test_hessian'
+			namespace : 'test_hessian',
+			needPersist : false
 		},
 		events : {
 		    create : "start",
