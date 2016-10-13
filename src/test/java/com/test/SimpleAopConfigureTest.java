@@ -13,15 +13,27 @@ public class SimpleAopConfigureTest {
         ioc=
             new NutIoc(
                 new ComboIocLoader("*json", "/ioc", "*anno", "com.test", "*com.jarvis.cache.aop.nutz.AutoLoadCacheIocLoader"));
+        test1();
+        System.out.println("----------------------------------------");
+        test1();
+        
         test();
         try {
             Thread.sleep(120 * 1000);
         } catch(InterruptedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         test();
+        
         ioc.depose();
+    }
+    private static void test1(){
+        AutoLoadCacheService s=ioc.get(AutoLoadCacheService.class);
+        long id=100;
+        AutoLoadCache d1=s.getById(id);
+        System.out.println(d1);
+        AutoLoadCache d2=s.getByName("name"+id);
+        System.out.println(d2);
     }
 
     private static void test() {
